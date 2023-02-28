@@ -1,0 +1,146 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.box
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202632;
+    font-family: 'Roboto', sans-serif;
+}
+.box .container
+{
+    width: 450px;
+    height: 300px;
+    background-color: #313a49;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+/* Start Text */
+.box .container h2
+{
+    font-size: 13px;
+    font-weight: 400;
+    color: #52feaa;
+}
+.box .container h2 span
+{
+    margin-left: 5px;
+}
+.box .container p
+{
+    width: 80%;
+    height: 35%;
+    font-size: 24px;
+    font-weight: 400;
+    color: #c8dce3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+/* End Text */
+/* Start UnderLine */
+.box .container .underLine
+{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+.box .container .underLine span:first-of-type , .box .container .underLine span:last-of-type
+{
+    width: 175px;
+    height: 1px;
+    background-color: rgba(200, 220, 227,0.5);
+}
+.box .container .underLine span:nth-of-type(2)
+{
+    width: 20px;
+    height: 25px;
+    position: relative;
+}
+.box .container .underLine span:nth-of-type(2)::after
+{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 5px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: rgba(200, 220, 227,0.5);;
+    transform: translateY(50%);
+}
+.box .container .underLine span:nth-of-type(2)::before
+{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    width: 5px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: rgba(200, 220, 227,0.5);;
+    transform: translateY(50%);
+}
+/* End UnderLine */
+/* Start Random Button */
+.box .container .btn
+{
+    position: absolute;
+    bottom: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #52feaa;
+    border-radius: 50px;
+}
+.box .container .btn:hover
+{
+    box-shadow: 0 0 25px #52feaa;
+    cursor: pointer;
+}
+.box .container .btn i
+{
+    font-size: 24px;
+    color: #202632;
+}
+/* End Random Button */
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    .box .container
+    {
+        width: 90%;
+        height: 300px;
+    }
+    .box .container p
+    {
+        width: 90%;
+        height: 45%;
+    }
+    .box .container .underLine
+    {
+        width: 80%;
+    }
+    .box .container .underLine span:nth-of-type(2)
+    {
+        width: 25px;
+    }
+}
+/* End Media Query */

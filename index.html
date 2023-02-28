@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Start Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Fontawesome file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Start CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Advice Generator App</title>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <!-- Start Text -->
+            <h2>ADVICE <span id="adviceNum">#1</span></h2>
+            <p id="advice">It is easy to sit up and take notice, what's difficult is  getting up and taking action.</p>
+            <!-- End Text -->
+            <!-- Start UnderLine -->
+            <div class="underLine">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- End UnderLine -->
+            <!-- Start Random Button -->
+            <div class="btn" onclick="generateAdvice()">
+                <i class="fa-solid fa-dice-five"></i>
+            </div>
+            <!-- End Random Button -->
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
