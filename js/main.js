@@ -1,35 +1,25 @@
 var adviceButton = document.querySelector('#adviceBtn');
-var advice = [];
+// var advice = [];
 
 
-function startAdvice()
+async function startAdvice()
 {
-    var advices = new XMLHttpRequest();
-    advices.open('GET' ,`https://api.adviceslip.com/advice`);
-    advices.send();
-    advices.addEventListener('readystatechange' , function() {
-        if(advices.readyState == 4)
-        {
-            advice = JSON.parse(advices.response);
-            document.querySelector('#adviceId').innerHTML = `#${advice.slip.id}`;
-            document.querySelector('#advice').innerHTML = `${advice.slip.advice}`;
-        }
-    })
+    var advices = await fetch(`https://api.adviceslip.com/advice`);
+    var advice = await advices.json();
+    document.querySelector('#adviceId').innerHTML = `#${advice.slip.id}`;
+    document.querySelector('#advice').innerHTML = `${advice.slip.advice}`;
 }
 
 startAdvice();
 
 adviceButton.addEventListener('click' , function()
 {
-    var advices = new XMLHttpRequest();
-    advices.open('GET' ,`https://api.adviceslip.com/advice`);
-    advices.send();
-    advices.addEventListener('readystatechange' , function() {
-        if(advices.readyState == 4)
-        {
-            advice = JSON.parse(advices.response);
-            document.querySelector('#adviceId').innerHTML = `#${advice.slip.id}`;
-            document.querySelector('#advice').innerHTML = `${advice.slip.advice}`;
-        }
-    })
+    async function startAdvice()
+    {
+        var advices = await fetch(`https://api.adviceslip.com/advice`);
+        var advice = await advices.json();
+        document.querySelector('#adviceId').innerHTML = `#${advice.slip.id}`;
+        document.querySelector('#advice').innerHTML = `${advice.slip.advice}`;
+    }
+    startAdvice();
 })
