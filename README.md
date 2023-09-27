@@ -10,8 +10,6 @@
 
 ## Technologies Used
 
-List the technologies, programming languages, and tools that were used in the development of your project. Here's an example:
-
 - **Programming Languages:** HTML , CSS , JS and API.
 - **Other Tools:** VS Code, Postman.
 
