@@ -1,6 +1,6 @@
 <!-- Project Name -->
 <h1>Advice Generator</h1>
-<p>An Islamic website.</p>
+<p>Sample website generate Adives.</p>
 
 <!-- Table of Contents -->
 ## Table of Contents
